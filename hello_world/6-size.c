@@ -1,6 +1,6 @@
 #include <stdio.h>
 int
-main (void)
+main(void)
 {
 printf("Size of a char: 1 byte(s)\n");
 printf("Size of an int: 4 byte(s)\nSize of a long int: 4 byte(s)\n");

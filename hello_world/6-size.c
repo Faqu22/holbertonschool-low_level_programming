@@ -1,4 +1,3 @@
-FILE *stderr;
 #include <stdio.h>
 int
 main(void)

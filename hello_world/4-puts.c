@@ -1,12 +1,12 @@
 #include <stdio.h>
 int
-main (void)
+main(void)
 {
 
-  char *cadena = "\"Programming is like building a multilingual puzzle";
+char *cadena = "\"Programming is like building a multilingual puzzle";
 
-  puts (cadena);
+puts(cadena);
 
-  return (0);
+return (0);
 
 }

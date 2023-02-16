@@ -4,10 +4,11 @@
 int
 main(void)
 {
-	for (int i = 97 ; i < 123 ; i++)
+	char abc[27] = {"abcdefghijklmnopqrstuvwxyz\n"};
+
+	for (int i = 0 ; i < 27 ; i++)
 	{
-		printf("%c", i);
+		putchar(abc[i]);
 	}
-	printf("\n");
 	return (0);
 }

@@ -6,17 +6,17 @@ main(void)
 
 	int n = 48;
 
-	do{
-		putchar (n);
+	while (i < 10)
+	{
+		putchar(n);
 		n++;
 		i++;
-		if ( i < 10 )
+		if (i < 10)
 		{
-			putchar (44);
-			putchar (32);
+		putchar(44);
+		putchar(32);
 		}
 	}
-	while (i < 10);
 	putchar(10);
 	return (0);
 }

@@ -5,7 +5,7 @@ main(void)
 	int i = 0;
 
 	int n = 48;
-	
+
 	int a = 97;
 
 	while (i < 10)

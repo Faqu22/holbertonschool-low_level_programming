@@ -2,15 +2,15 @@
 int
 main(void)
 {
-	char c = '0';
-
 	int i = 0;
+
+	int n = 47;
 
 	while (i < 10)
 	{
-		putchar (c);
-		c++;
+		putchar (n + 1);
 		i++;
+		n++;
 	}
 	putchar(10);
 	return (0);

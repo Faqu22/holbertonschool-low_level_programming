@@ -27,7 +27,7 @@ jack_bauer(void)
 			uHour++;
 			dMin = 0;
 		}
-		if (uHour == 9)
+		if (uHour == 10)
 		{
 			dHour++;
 			uHour = 0;

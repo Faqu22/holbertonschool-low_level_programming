@@ -16,8 +16,13 @@ times_table(void)
 			res = table[i] * a;
 			if (res < 10)
 			{
-				_putchar(32);
 				_putchar(res + '0');
+				_putchar(32);
+				if (i < 9)
+				{
+					_putchar(44);
+					_putchar(32);
+				}
 			}
 			if (res > 9)
 			{
@@ -25,11 +30,11 @@ times_table(void)
 				dec[1] = res % 10;
 				_putchar(dec[0] + '0');
 				_putchar(dec[1] + '0');
-			}
-			if (i < 9)
-			{
-				_putchar(44);
-				_putchar(32);
+				if (i < 9)
+				{
+					_putchar(44);
+					_putchar(32);
+				}
 			}
 		}
 	_putchar(10);

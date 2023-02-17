@@ -3,7 +3,7 @@
 void
 times_table(void)
 {
-	int dec[1];
+	int dec[2];
 	int res;
 	int a;
 	int i;
@@ -19,8 +19,6 @@ times_table(void)
 			l = table[b] * a;
 
 			res = table[i] * a;
-			dec[0] = res / 10;
-			dec[1] = res % 10;
 			if (res < 10)
 			{
 				_putchar(res + '0');
@@ -30,12 +28,14 @@ times_table(void)
 					_putchar(32);
 				}
 			}
-			if (res < 10 && l < 10)
+			if (res < 10 && (l < 10 && i != 9))
 			{
 				_putchar(32);
 			}
 			if (res > 9)
 			{
+				dec[0] = res / 10;
+				dec[1] = res % 10;
 				_putchar(dec[0] + '0');
 				_putchar(dec[1] + '0');
 				if (i < 9)

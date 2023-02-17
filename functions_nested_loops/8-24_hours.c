@@ -1,6 +1,7 @@
 #include "main.h"
 
-void jack_bauer(void)
+void
+jack_bauer(void)
 {
 	int dHour = 0;
 	int uHour = 0;
@@ -16,20 +17,20 @@ void jack_bauer(void)
 		_putchar(uMin + '0');
 		_putchar(10);
 		uMin++;
-		if(uMin == 10)
+		if (uMin == 10)
 		{
 			dMin++;
 			uMin = 0;
 		}
-		if(dMin == 6)
+		if (dMin == 6)
 		{
 			uHour++;
 			dMin = 0;
 		}
-		if(uHour == 9)
-	        {
+		if (uHour == 9)
+		{
 			dHour++;
-                	uHour = 0;
+			uHour = 0;
 		}
 	}
 }

@@ -8,6 +8,6 @@ SRC= school.c main.c
 
 NAME= school
 
-school: $(OBJ)
+$(NAME): $(OBJ)
 	$(CC)  -o $(NAME) $(SRC)
 

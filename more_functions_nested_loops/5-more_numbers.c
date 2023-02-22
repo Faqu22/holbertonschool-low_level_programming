@@ -1,6 +1,6 @@
 #include "main.h"
 void
-print_numbers(void)
+more_numbers(void)
 {
 	int i;
 	int a;

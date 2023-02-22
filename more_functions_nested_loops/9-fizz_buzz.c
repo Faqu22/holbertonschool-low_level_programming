@@ -1,6 +1,6 @@
 #include "main.h"
-void
-FizzBuzz(void)
+int
+main(void)
 {
 	int i;
 
@@ -17,4 +17,5 @@ FizzBuzz(void)
 		if (i == 100)
 			printf("FizzBuzz");
 	}
+	return (0);
 }

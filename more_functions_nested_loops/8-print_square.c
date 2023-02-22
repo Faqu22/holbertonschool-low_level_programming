@@ -13,6 +13,7 @@ print_square(int size)
 			_putchar(35);
 			a++;
 		}
+		_putchar(10);
 	}
 	if (size < 1)
 		_putchar(10);

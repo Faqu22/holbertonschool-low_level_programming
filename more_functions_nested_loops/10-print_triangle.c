@@ -6,6 +6,7 @@ print_triangle(int size)
 	int i;
 	int a = size;
 	int b;
+
 	for (i = 0; i < size ; i++)
 	{
 		b = 0;
@@ -15,8 +16,7 @@ print_triangle(int size)
 			putchar(32);
 			b++;
 		}
-
-		while ((b >= a ) && (b < size))
+		while ((b >= a) && (b < size))
 		{
 			putchar(35);
 			b++;

@@ -1,0 +1,18 @@
+CC=gcc
+
+CFLAGS= -march
+
+SRC= %.c
+
+all: school
+
+school: school.c  main.c
+	gcc -o school school.c  main.c
+
+OBJ=school.o main.o
+
+%.o: $(SRC)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJ) school

@@ -9,5 +9,5 @@ OBJ= %.o
 SRC= school.c main.c
 
 $(NAME): $(OBJ)
-	$(CC)  -o $(NAME) $(SRC)
+	$(CC) -c -o $(NAME) $(SRC)
 

@@ -2,7 +2,7 @@ CC=gcc
 
 all: school
 
-OBJ= main.o school.o
+OBJ= %.o
 
 SRC= school.c main.c
 

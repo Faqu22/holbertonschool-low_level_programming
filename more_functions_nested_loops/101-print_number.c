@@ -1,7 +1,7 @@
 #include "main.h"
 #include <limits.h>
 void
-print_number(int n)
+print_numbers(int n)
 {
 	int div, ult, zero;
 	int mod = 10;

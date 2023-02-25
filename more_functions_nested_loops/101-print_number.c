@@ -3,47 +3,45 @@
 void
 print_number(int n)
 {
-	int div, ult, zero;
-	int mod = 10;
-	int cont = 0;
-	int neg = n;
-
-	if (n < 0)
-	{
-		ult = n % 10 * -1;
-		n = n / 10 * -1;
-		_putchar('-');
-	}
+	int first, numNew = n, ult, div = 1, contador = 0;
+	(n == INT_MIN) ? ult = n % 10 * -1, n = n / 10 * -1, putchar('-') : -1;
+	(n < 0) ? n = n * -1, putchar('-') : -1;
+	(n == 0) ? putchar('0') : -1;
 	while (n > 9)
 	{
-		while (mod < n)
+		while (div < n)
 		{
-			mod = mod * 10;
-			cont = 0;
+			if (div > 999999999)
+			{
+				div = 1000000000;
+				break;
+			}
+			div = div * 10;
 		}
-		while (mod > n)
-		{
-			mod = mod / 10;
-			cont++;
-		}
-		div = n;
-		while (div > 9)
+		while (div > n)
 		{
 			div = div / 10;
+			contador++;
 		}
-		zero = cont - 1;
-		if (cont != 1)
+		while (contador > 1)
 		{
-			while (zero > 1)
-			{
-				_putchar('0');
-				zero--;
-			}
+			putchar('0');
+			contador--;
 		}
-		_putchar(div + '0');
-		n = n % mod;
+		(contador == 1) ? contador = 0 : -1;
+		(n > 9) ? first = n / div, putchar(first + '0'), n = n % div : -1;
 	}
-	_putchar(n + '0');
-	if (neg < 0)
-		_putchar(ult + '0');
+	contador = 0;
+	while (div > n)
+	{
+		div = div / 10;
+		contador++;
+	}
+	while (contador > 1)
+	{
+		putchar('0');
+		contador--;
+	}
+	(n == 0) ? -1 : putchar(n + '0');
+	(numNew == INT_MIN) ? putchar(ult + '0') : -1;
 }

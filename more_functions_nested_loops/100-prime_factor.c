@@ -17,7 +17,6 @@ main()
 		if (m % l == 0 && l != 1)
 		{
 			n = m;
-			printf("%ld, ", l);
 			m = n / l;
 			l = 0;
 		}

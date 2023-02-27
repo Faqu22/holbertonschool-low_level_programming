@@ -5,7 +5,8 @@ print_rev(char *s)
 {
 	int a = strlen(s);
 
-	for (; (a - 1) >= 0; a--)
+	a = a - 1;
+	for (; a >= 0; a--)
 	{
 		_putchar(s[a]);
 	}

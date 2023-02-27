@@ -4,10 +4,12 @@ void
 puts2(char *str)
 {
 	int cont = 0;
+
 	while (str[cont])
 	{
-		_putchar(str[cont]);
-		cont = cont + 2;
+		if (cont % 2 == 0)
+			_putchar(str[cont]);
+		cont++;
 	}
 	_putchar('\n');
 }

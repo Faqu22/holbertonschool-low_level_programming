@@ -11,7 +11,8 @@ rev_string(char *s)
 		_putchar(s[x]);
 		a++;
 	}
-	for (a = a - 1; a >= 0; a--)
+	_putchar('\n');
+	for (a = a - 1; s[a] != s[0]; a--)
 	{
 		_putchar(s[a]);
 	}

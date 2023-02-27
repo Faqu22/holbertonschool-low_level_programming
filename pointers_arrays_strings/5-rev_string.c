@@ -4,15 +4,16 @@ void
 rev_string(char *s)
 {
 	int a = 0;
-	int x;
+	int x = 0;
 
-	for (x = 0; s[x] != '\0'; x++)
+	for (; s[x] != '\0'; x++)
 	{
 		_putchar(s[x]);
 		a++;
 	}
 	_putchar('\n');
-	for (a = a - 1; s[a] != s[0]; a--)
+	a = a -1;
+	for (; a >= 0 ; a--)
 	{
 		_putchar(s[a]);
 	}

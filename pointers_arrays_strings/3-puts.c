@@ -3,5 +3,12 @@
 void
 _puts(char *str)
 {
-	puts(str);
+	int cont = 0;
+	while (str[cont] != '\0')
+	{
+		_putchar(str[cont]);
+		cont++;
+	}
+
+
 }

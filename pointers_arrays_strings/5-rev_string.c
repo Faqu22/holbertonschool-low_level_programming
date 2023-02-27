@@ -3,19 +3,17 @@
 void
 rev_string(char *s)
 {
+	int reverse = 0;
+	int i = 0;
 	int a = 0;
-	int x = 0;
 
-	for (; s[x] != '\0'; x++)
+	while (s[i] != '\0')
+		i++;
+	i--;
+	for (; i >= a; i--, a++)
 	{
-		_putchar(s[x]);
-		a++;
+		reverse = s[i];
+		s[i] = s[a];
+		s[a] = reverse;
 	}
-	_putchar('\n');
-	a = a -1;
-	for (; a >= 0 ; a--)
-	{
-		_putchar(s[a]);
-	}
-	_putchar('\n');
 }

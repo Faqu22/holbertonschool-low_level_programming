@@ -3,7 +3,8 @@
 void
 rev_string(char *s)
 {
-	int a, x;
+	int a = 0;
+	int x;
 
 	for (x = 0; s[x] < '\0'; x++)
 	{

@@ -3,12 +3,15 @@
 void
 print_rev(char *s)
 {
-	int a = strlen(s);
+	int a = 0;
 
-	a = a - 1;
-	for (; a >= 0; a--)
+	while(s[a])
+		a++;
+	a--;
+	while (a >= 0)
 	{
 		_putchar(s[a]);
+		a--;
 	}
 	_putchar('\n');
 }

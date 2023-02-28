@@ -5,7 +5,7 @@ print_array(int *a, int n)
 {
 	int cont = 0;
 
-	while (n >= cont)
+	while (n > cont)
 	{
 		printf("%d, ", a[cont]);
 		cont++;

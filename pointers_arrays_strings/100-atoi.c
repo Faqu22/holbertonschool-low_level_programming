@@ -3,7 +3,7 @@
 int
 _atoi(char *s)
 {
-	int filter = 0;
+	unsigned int filter = 0;
 	int sign = 1;
 	int cont = 0;
 
@@ -13,6 +13,8 @@ _atoi(char *s)
 		{
 			filter = filter * 10 + (s[cont] - 48);
 		}
+		if (s[cont] >= 48 && (s[cont] <= 57 && (s[cont + 1] < 48 || s[cont] > 57)))
+			break;
 		if (s[cont] == 45)
 		{
 			sign = sign * -1;

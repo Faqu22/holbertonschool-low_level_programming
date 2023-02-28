@@ -11,8 +11,9 @@ print_array(int *a, int n)
 		cont++;
 		if (cont == n - 1)
 		{
-			printf("%d\n", a[cont]);
+			printf("%d", a[cont]);
 			break;
 		}
 	}
+	_putchar(10);
 }

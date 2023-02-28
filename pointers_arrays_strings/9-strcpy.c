@@ -10,6 +10,7 @@ char
 		dest[cont] = src[cont];
 		cont++;
 	}
+	cont--;
 	return (dest);
 
 }

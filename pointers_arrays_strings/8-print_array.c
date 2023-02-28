@@ -15,5 +15,5 @@ print_array(int *a, int n)
 			break;
 		}
 	}
-	_putchar(10);
+	printf("\n");
 }

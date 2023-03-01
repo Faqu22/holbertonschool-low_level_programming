@@ -8,8 +8,6 @@ char
 	while (cont < n)
 	{
 		dest[cont] = src[cont];
-		if (src[cont] == '\0')
-			break;
 		cont++;
 	}
 	return (dest);

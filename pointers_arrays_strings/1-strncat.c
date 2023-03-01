@@ -12,6 +12,8 @@ char
 	{
 		dest[cont] = src[contSrc];
 		cont++;
+		if(src[contSrc] == '\0')
+			break;
 		contSrc++;
 	}
 	return (dest);

@@ -12,14 +12,13 @@ char
 	while (cont < n)
 	{
 		dest[cont] = src[cont];
-		if (cont == contSrc)
-		{
-			contCont++;
-			cont = 0;
-		}
-		if (contCont == n)
+		if (cont == contCont)
 			break;
 		cont++;
+	}
+	while (cont < n)
+	{
+		dest[cont++] = '\0';
 	}
 	return (dest);
 }

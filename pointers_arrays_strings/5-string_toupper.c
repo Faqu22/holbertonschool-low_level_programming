@@ -7,7 +7,7 @@ char
 
 	while (upp[cont])
 	{
-		if (upp[cont] >= 98 && upp[cont] <= 122)
+		if (upp[cont] >= 97 && upp[cont] <= 122)
 			upp[cont] = upp[cont] - 32;
 		cont++;
 	}

@@ -7,9 +7,7 @@ char
 
 	while (cap[cont])
 	{
-		if (cap[cont] < 97 && cap[cont] > 122)
-			continue;
-		else
+		if (cap[cont] >= 97 && cap[cont] <= 122)
 		{
 			switch (cap[cont - 1])
 			{

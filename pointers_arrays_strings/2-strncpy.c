@@ -5,14 +5,13 @@ char
 {
 	int cont = 0;
 	int contSrc = 0;
-	int contCont = 0;
+
 	while (src[contSrc])
 		contSrc++;
-	contSrc--;
 	while (cont < n)
 	{
 		dest[cont] = src[cont];
-		if (cont == contCont)
+		if (src[cont] == '\0')
 			break;
 		cont++;
 	}

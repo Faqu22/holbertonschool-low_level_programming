@@ -12,7 +12,7 @@ char
 	{
 		dest[cont] = src[contSrc];
 		cont++;
-		if(src[contSrc] == '\0')
+		if (src[contSrc] == '\0')
 			break;
 		contSrc++;
 	}

@@ -8,10 +8,9 @@ char
 
 	while (dest[cont])
 		cont++;
-	cont++;
 	while (src[contSrc])
 	{
-		dest[cont] = dest[contSrc];
+		dest[cont] = src[contSrc];
 		cont++;
 		contSrc++;
 	}

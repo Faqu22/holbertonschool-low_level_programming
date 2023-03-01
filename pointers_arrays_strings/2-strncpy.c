@@ -8,6 +8,7 @@ char
 	int contCont = 0;
 	while (src[contSrc])
 		contSrc++;
+	contSrc--;
 	while (cont < n)
 	{
 		dest[cont] = src[cont];

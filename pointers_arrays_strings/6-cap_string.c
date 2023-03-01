@@ -7,7 +7,9 @@ char
 
 	while (cap[cont])
 	{
-		if (cap[cont]  >= 97 && cap[cont] <= 122)
+		if (cap[cont] < 97 && cap[cont] > 122)
+			continue;
+		else
 		{
 			switch (cap[cont - 1])
 			{
@@ -26,8 +28,8 @@ char
 				case 125:
 					cap[cont] = cap[cont] - 32;
 			}
-			cont++;
 		}
+		cont++;
 	}
 	return (cap);
 }

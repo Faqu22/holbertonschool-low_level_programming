@@ -9,6 +9,8 @@ char
 	{
 		dest[cont] = src[cont];
 		cont++;
+		if(src[cont] == '\0')
+			n = n - cont;
 	}
 	return (dest);
 }

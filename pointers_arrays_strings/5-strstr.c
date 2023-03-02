@@ -5,21 +5,24 @@ char
 {
 	int cont = 0;
 	int contEnd = 0;
+	int initial = 0;
 	int temp = 0;
 
-	while (haystack[cont])
+	while (haystack[contEnd])
 	{
-		while (haystack[cont] == needle[temp])
+		temp = contEnd;
+		while (needle[cont] == haystack[temp])
 		{
-			if (contEnd == 0)
-				contEnd = cont;
+			if (initial == 0)
+				initial = temp;
 			cont++;
 			temp++;
-			if (needle[temp] == '\0' && contEnd != 0)
+			if (needle[cont] == '\0')
 				return (haystack + contEnd);
 		}
-		contEnd = 0;
-		cont++;
+		cont = 0;
+		initial = 0;
+		contEnd++;
 	}
 	return (0);
 }

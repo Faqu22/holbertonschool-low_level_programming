@@ -1,13 +1,15 @@
 #include "main.h"
 
-char *_strstr(char *haystack, char *needle)
+char
+*_strstr(char *haystack, char *needle)
 {
 	int cont = 0;
 	int contEnd = 0;
 	int temp = 0;
+
 	while (haystack[cont])
 	{
-		while(haystack[cont] == needle[temp])
+		while (haystack[cont] == needle[temp])
 		{
 			if (temp == 0)
 				contEnd = cont;
@@ -18,7 +20,8 @@ char *_strstr(char *haystack, char *needle)
 					return (haystack + contEnd);
 			}
 		}
+		contEnd = 0;
 		cont++;
 	}
-	return(0);
+	return (0);
 }

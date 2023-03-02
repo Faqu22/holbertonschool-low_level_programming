@@ -11,14 +11,12 @@ char
 	{
 		while (haystack[cont] == needle[temp])
 		{
-			if (temp == 0)
+			if (contEnd == 0)
 				contEnd = cont;
 			cont++;
 			temp++;
-			if (needle[temp] == '\0')
-			{
-					return (haystack + contEnd);
-			}
+			if (needle[temp] == '\0' && contEnd != 0)
+				return (haystack + contEnd);
 		}
 		contEnd = 0;
 		cont++;

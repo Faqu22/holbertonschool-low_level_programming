@@ -17,7 +17,7 @@ char
 		contAcc = 0;
 		cont++;
 	}
-	if (accept[0] == '\0')
+	if (accept[0] == 0)
 		return (s + cont);
 	return (0);
 }

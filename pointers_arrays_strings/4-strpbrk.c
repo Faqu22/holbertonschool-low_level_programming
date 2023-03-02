@@ -18,6 +18,6 @@ char
 		cont++;
 	}
 	if (accept[0] == 0)
-		return (s + cont);
+		return (accept);
 	return (0);
 }

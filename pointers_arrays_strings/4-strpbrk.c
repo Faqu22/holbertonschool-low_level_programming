@@ -17,10 +17,10 @@ char
 		contAcc = 0;
 		cont++;
 	}
-	while(accept[contAcc])
+	while (accept[contAcc])
 	{
-		if(s[cont] == accept[contAcc])
-			return(s + cont);
+		if (s[cont] == accept[contAcc])
+			return (s + cont);
 		contAcc++;
 	}
 	return (0);

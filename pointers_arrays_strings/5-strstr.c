@@ -8,6 +8,8 @@ char
 	int initial = 0;
 	int temp = 0;
 
+	if (needle[0] == '\0')
+		return (haystack + 0);
 	while (haystack[contEnd])
 	{
 		temp = contEnd;

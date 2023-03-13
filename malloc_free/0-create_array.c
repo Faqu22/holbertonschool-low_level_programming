@@ -8,6 +8,8 @@ char
 	char *arr;
 
 	arr = malloc(sizeof(char) * size);
+	if (size < 1)
+		return (NULL);
 	if (arr == NULL)
 		return (arr);
 	while (i < size)

@@ -7,9 +7,9 @@ char
 	unsigned int i = 0;
 	char *arr;
 
-	arr = (char*)malloc(sizeof(char) * size);
-	if (size < 1)
-		return (NULL);
+	arr = malloc(sizeof(char) * size);
+	if (arr == NULL)
+		return (arr);
 	while (i < size)
 	{
 		arr[i] = c;

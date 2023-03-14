@@ -10,7 +10,7 @@ char
 	while (str[cont])
 		cont++;
 	if (str == NULL)
-		return (str);
+		return (NULL);
 	p = malloc(sizeof(char) * cont + 1);
 	if (p == NULL)
 		return (NULL);

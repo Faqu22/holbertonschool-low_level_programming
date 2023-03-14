@@ -7,14 +7,12 @@ char
 	char *p;
 	int contNew = 0;
 
-	if (str == NULL)
-		exit (1);
-	{
-		while (str[cont])
-			cont++;
-		p = malloc(sizeof(char) * cont + 1);
-		for (; contNew < cont; contNew++)
-			p[contNew] = str[contNew];
-	}
+	while (str[cont])
+		cont++;
+	p = malloc(sizeof(char) * cont + 1);
+	if (p == NULL)
+		return (p);
+	for (; contNew < cont; contNew++)
+		p[contNew] = str[contNew];
 	return (p);
 }

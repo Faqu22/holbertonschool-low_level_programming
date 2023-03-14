@@ -7,10 +7,10 @@ char
 	char *p;
 	int contNew = 0;
 
-	while (str[cont])
-		cont++;
 	if (str == NULL)
 		return (NULL);
+	while (str[cont])
+		cont++;
 	p = malloc(sizeof(char) * cont + 1);
 	if (p == NULL)
 		return (NULL);

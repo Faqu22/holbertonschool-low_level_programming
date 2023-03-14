@@ -16,5 +16,6 @@ char
 		return (NULL);
 	for (; contNew < cont; contNew++)
 		p[contNew] = str[contNew];
+	p[cont] = '\0';
 	return (p);
 }

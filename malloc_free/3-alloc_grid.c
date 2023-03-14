@@ -23,6 +23,9 @@ int
 		{
 			qdl[i][a] = 0;
 			a++;
+			if (qdl[i] == NULL)
+				free(qdl[i]);
+			free(qdl);
 		}
 		a = 0;
 		i++;

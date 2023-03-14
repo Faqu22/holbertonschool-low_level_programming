@@ -9,6 +9,8 @@ char
 
 	while (str[cont])
 		cont++;
+	if (str == NULL)
+		return (str);
 	p = malloc(sizeof(char) * cont + 1);
 	if (p == NULL)
 		return (p);

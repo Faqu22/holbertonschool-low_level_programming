@@ -7,15 +7,15 @@ char
 	char *p;
 	int contNew = 0;
 
-	if (str == 0)
+	if (str == NULL)
 	{
-		return (NULL);
+		return (str);
 	}
 	else
 	{
 		while (str[cont])
 			cont++;
-		p = malloc(sizeof(char) * cont);
+		p = malloc(sizeof(char) * cont + 1);
 		for (; contNew < cont; contNew++)
 			p[contNew] = str[contNew];
 	}

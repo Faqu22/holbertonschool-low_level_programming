@@ -11,21 +11,33 @@ int
 	if (width < 1 || height < 1)
 		return (NULL);
 	qdl = (int **)malloc(height * sizeof(int *));
+	if (qdl == NULL)
+		return (NULL);
 	while (i < height)
 	{
 		qdl[i] = (int *)malloc(sizeof(int) * width);
+		if (qdl[i] != NULL)
+		{
+			continue;
+		}
+		else
+		{
+			for  (; i >= 0; i--)
+			{
+				free(qdl[i]);
+			}
+			free(qdl);
+			return (NULL);
+		}
 		i++;
 	}
 	i = 0;
-	while (qdl[i])
+	while (i < height)
 	{
-		while (qdl[i][a])
+		while (a < width)
 		{
 			qdl[i][a] = 0;
 			a++;
-			if (qdl[i] == NULL)
-				free(qdl[i]);
-			free(qdl);
 		}
 		a = 0;
 		i++;

@@ -8,7 +8,7 @@ char
 	int contNew = 0;
 
 	if (str == NULL)
-		return (str);
+		exit (1);
 	{
 		while (str[cont])
 			cont++;

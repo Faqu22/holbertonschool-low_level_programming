@@ -6,10 +6,11 @@ int
 {
 	int i = 0;
 	int a = 0;
-	int **qdl = (int **)malloc(height * sizeof(int *));
+	int **qdl;
 
 	if (width < 1 || height < 1)
 		return (NULL);
+	qdl = (int **)malloc(height * sizeof(int *));
 	while (i < height)
 	{
 		qdl[i] = (int *)malloc(sizeof(int) * width);

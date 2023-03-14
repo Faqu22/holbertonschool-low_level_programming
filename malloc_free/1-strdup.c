@@ -12,7 +12,7 @@ char
 	if (str == NULL)
 		return (str);
 	p = malloc(sizeof(char) * cont + 1);
-	if (p < 2)
+	if (p == NULL)
 		return (NULL);
 	for (; contNew < cont; contNew++)
 		p[contNew] = str[contNew];

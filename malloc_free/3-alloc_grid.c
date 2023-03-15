@@ -16,15 +16,12 @@ int
 	while (i < height)
 	{
 		qdl[i] = (int *)malloc(sizeof(int) * width);
-		if (qdl[i] != NULL)
+		if (qdl[i] == NULL)
 		{
-			continue;
-		}
-		else
-		{
-			for  (; i >= 0; i--)
+			while (i >= 0)
 			{
 				free(qdl[i]);
+				i--;
 			}
 			free(qdl);
 			return (NULL);
@@ -34,12 +31,8 @@ int
 	i = 0;
 	while (i < height)
 	{
-		while (a < width)
-		{
+		for (a = 0; a < width; a++)
 			qdl[i][a] = 0;
-			a++;
-		}
-		a = 0;
 		i++;
 	}
 	return (qdl);

@@ -5,9 +5,13 @@ char
 {
 	unsigned int cont, conts2;
 	char *c;
+	char *asd;
 
 	if (s1 == NULL && s2 == NULL)
-		return (NULL);
+	{
+		asd = malloc(sizeof(char) * 1);
+		return (asd);
+	}
 
 	for (cont = 0; s1 != NULL && s1[cont]; cont++)
 		;

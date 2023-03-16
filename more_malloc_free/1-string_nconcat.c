@@ -9,8 +9,8 @@ char
 
 	if (s1 == NULL && s2 == NULL)
 	{
-		asd = malloc(sizeof(char) * 1);
-		return (asd);
+		s1 = "";
+		s2 = "";
 	}
 
 	for (cont = 0; s1 != NULL && s1[cont]; cont++)

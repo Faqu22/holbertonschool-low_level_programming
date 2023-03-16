@@ -1,18 +1,4 @@
 #include "main.h"
-#include <limits.h>
-
-char
-*malloc_check(unsigned int b)
-{
-	char *p;
-
-	if (b < 1)
-		return (NULL);
-	p = malloc(b);
-	if (p == NULL)
-		return (NULL);
-	return (p);
-}
 
 char
 *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -30,8 +16,9 @@ char
 		;
 
 	n = (conts2 < n) ? conts2 : n;
-	c = malloc_check(sizeof(char) * (cont + n));
-
+	c = malloc(sizeof(char) * (cont + n));
+	if (c == NULL)
+		return (NULL);
 	for (cont = 0; s1[cont]; c[cont] = s1[cont], cont++)
 		;
 

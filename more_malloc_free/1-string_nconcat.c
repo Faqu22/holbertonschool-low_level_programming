@@ -5,7 +5,6 @@ char
 {
 	unsigned int cont, conts2;
 	char *c;
-	char *asd;
 
 	if (s1 == NULL && s2 == NULL)
 	{

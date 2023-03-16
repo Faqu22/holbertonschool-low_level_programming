@@ -10,7 +10,7 @@ void
 		exit(98);
 	p = malloc(b);
 	if (p == NULL)
-		return (NULL);
+		exit(98);
 	return (p);
 
 }

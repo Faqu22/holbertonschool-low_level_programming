@@ -3,13 +3,13 @@
 char
 *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int cont = 0, conts2 = 0;
+	unsigned int cont, conts2;
 	char *c;
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 
-	for (cont = 0; s1[cont] && s1 != NULL; cont++)
+	for (cont = 0;s1 != NULL && s1[cont]; cont++)
 		;
 
 	for (conts2 = 0; s2[conts2]; conts2++)

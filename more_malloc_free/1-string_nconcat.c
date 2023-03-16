@@ -25,6 +25,6 @@ char
 	for (conts2 = 0; conts2 < n; conts2++)
 		c[conts2 + cont] = s2[conts2];
 
-	c[conts2 + cont + 1] = '\0';
+	c[cont + n] = '\0';
 	return (c);
 }

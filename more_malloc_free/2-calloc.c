@@ -11,7 +11,7 @@ void
 	p = (char *)malloc(nmemb * size);
 	if (p == NULL)
 		return (NULL);
-	for (a = 0;a < nmemb * size ; a++)
+	for (a = 0; a < nmemb * size; a++)
 		p[a] = 0;
 	return (p);
 }

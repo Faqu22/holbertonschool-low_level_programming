@@ -17,6 +17,7 @@ char
 
 	n = (conts2 < n) ? conts2 : n;
 	c = malloc(sizeof(char) * (cont + n + 1));
+
 	if (c == NULL)
 		return (NULL);
 	for (cont = 0; s1 != NULL && s1[cont]; cont++)
@@ -25,5 +26,6 @@ char
 	for (conts2 = 0; s2 != NULL && conts2 < n; conts2++)
 		c[conts2 + cont] = s2[conts2];
 
+	c[cont + n] = '\0';
 	return (c);
 }

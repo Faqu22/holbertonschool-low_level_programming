@@ -16,7 +16,7 @@ char
 		;
 
 	n = (conts2 < n) ? conts2 : n;
-	c = malloc(sizeof(char) * (cont + n));
+	c = malloc(sizeof(char) * (cont + n + 1));
 	if (c == NULL)
 		return (NULL);
 	for (cont = 0; s1[cont]; c[cont] = s1[cont], cont++)

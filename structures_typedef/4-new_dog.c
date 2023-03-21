@@ -12,7 +12,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *my_dog;
-	int cont;
+	long unsigned int cont;
 
 	my_dog = malloc(sizeof(struct dog));
 	if (my_dog == NULL)

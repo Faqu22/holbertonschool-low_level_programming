@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	{	a = atoi(argv[1]);
 		b = atoi(argv[3]);
 	}
-	if (argv[2][1] != '\0')
+	if (argv[2][1] != '\0' || argv[2][0] == '.')
 	{
 		printf("Error\n");
 		exit(99);

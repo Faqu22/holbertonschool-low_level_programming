@@ -1,23 +1,19 @@
 #include "lists.h"
 
 /**
- * free_list - frees a list.
+ * free_list - free a list
  *
- * @head: list a free.
+ * @head: list a free
  */
 void free_list(list_t *head)
 {
-	struct list_s *temp;
-
-	if (head == NULL)
-		return;
-	while(head->next != NULL)
+	if (head != NULL)
 	{
-		free(head->str);
-		temp = head->next;
-		head = head->next;
-		free(temp);
+		if (head->str != NULL)
+		{
+			free(head->str);
+		}
+		free_list(head->next);
+		free(head);
 	}
-	free(head->next);
-	free(head);
 }

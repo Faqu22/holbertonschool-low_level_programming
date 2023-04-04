@@ -20,6 +20,9 @@ unsigned int binary_to_uint(const char *b)
 	for (cont = 0; b[cont]; cont++)
 		if (b[cont] != 48 && b[cont] != 49)
 			return (0);
+	i = atoi(b);
+	if (i == 0)
+		return (0);
 	cont--;
 	while (1)
 	{

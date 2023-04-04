@@ -1,5 +1,6 @@
 #include "lists.h"
 
+size_t dlistint_len(const dlistint_t *h);
 /**
  * insert_dnodeint_at_index - inserts a new node at a given position.
  *
@@ -43,3 +44,22 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	(*h)->prev = new;
 	return (new);
 }
+
+/**
+ * dlistint_len -  Give the number of linkes associeted.
+ *
+ * @h:is a list.
+ * Return: the number of nodes.
+ */
+size_t dlistint_len(const dlistint_t *h)
+{
+	size_t j = 0;
+
+	while (h != NULL)
+	{
+		h = h->next;
+		j++;
+	}
+	return (j);
+}
+

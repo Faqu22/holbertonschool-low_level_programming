@@ -1,5 +1,6 @@
 #include "lists.h"
 
+void remove0(dlistint_t **head, unsigned int index);
 /**
  * delete_dnodeint_at_index - deletes the node at index of a list.
  *
@@ -14,18 +15,16 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *prev = NULL;
 	dlistint_t *fr = NULL;
 
-	if (index >= dlistint_len(*head) || head == NULL || *head == NULL)
-	return (-1);
-	next = *head;
-	if (index == 0)
+	if (head == NULL || *head == NULL || index > dlistint_len(*head))
 	{
-		*head = (*head)->next;
-		if (*head)
-			(*head)->prev = NULL;
-		free(next);
+		return (-1);
+	}
+	next = *head;
+	if (index == 0 || index == dlistint_len(*head))
+	{
+		remove0(head, index);
 		return (1);
 	}
-
 	for (i = 0; i <= index + 1; i++)
 	{
 		if (*head == NULL)
@@ -65,4 +64,36 @@ size_t dlistint_len(const dlistint_t *h)
 	}
 	return (j);
 }
+/**
+ * remove0 - delete if the node is the head or the tail.
+ *
+ * @head: the list.
+ * @index: the index of the node.
+ */
+void remove0(dlistint_t **head, unsigned int index)
+{
+	dlistint_t *next;
 
+	if (*head == NULL)
+		return;
+
+	next = *head;
+	if (index == 0)
+	{
+		*head = (*head)->next;
+		if (*head)
+			(*head)->prev = NULL;
+		free(next);
+		return;
+	}
+	if (index == dlistint_len(*head))
+	{
+		while (next->next != NULL)
+			next = next->next;
+		*head = next->prev;
+		if (*head)
+			(*head)->next = NULL;
+		free(next);
+		return;
+}
+}

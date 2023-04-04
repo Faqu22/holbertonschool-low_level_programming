@@ -11,27 +11,26 @@ int power(int x, int y);
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int i = 0, l = 0, n = 0;
+	int i = 0, n = 0, cont = 0, a = 0;
 	unsigned int sum = 0;
 
 	if (b == NULL)
 		return (0);
-	for (i = 0; b[i]; i++)
-		if (b[i] != 48 && b[i] != 49)
+
+	for (cont = 0; b[cont]; cont++)
+		if (b[cont] != 48 && b[cont] != 49)
 			return (0);
-	l = atoi(b);
-	if (l == 0)
-		return (0);
-	i = 0;
+	cont--;
 	while (1)
 	{
-		i = (l % 10) * power(2, n);
+		a = b[cont] - 48;
+		i = a * power(2, n);
 		sum += i;
-		if (l < 2)
+		if (cont == 0)
 			break;
-		l = l / 10;
 		i++;
 		n++;
+		cont--;
 	}
 	return (sum);
 }

@@ -14,12 +14,13 @@ unsigned int binary_to_uint(const char *b)
 	int i = 0, l = 0, n = 0;
 	unsigned int sum = 0;
 
-
+	if (b == NULL)
+		return (0);
 	for (i = 0; b[i]; i++)
 		if (b[i] != 48 && b[i] != 49)
 			return (0);
 	l = atoi(b);
-	if (l == 0 || b == NULL)
+	if (l == 0)
 		return (0);
 	i = 0;
 	while (1)

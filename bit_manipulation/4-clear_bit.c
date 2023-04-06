@@ -2,7 +2,7 @@
 
 unsigned int lenbit(unsigned long int n);
 /**
- * set_bit - sets the value of a bit to 1 at a given index.
+ * clear_bit - sets the value of a bit to 0 at a given index.
  *
  * @n: number in decimals.
  * @index: index.
@@ -23,11 +23,10 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		i = i * 2;
 		index--;
 	}
-	if ((*n ^ i ) != (*n + i))
+	if ((*n ^ i) != (*n + i))
 		*n = *n ^ i;
 
 	return (1);
-
 }
 
 /**

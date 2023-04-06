@@ -12,15 +12,18 @@ int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int i = 1;
 
-	if (lenbit(*n) < index)
-		return (1);
 	if (lenbit(4294967295) < index)
 		return (-1);
-	for (; index > 0; index--)
+
+	if (lenbit(*n) < index)
+		return (1);
+
+	while (index > 0)
 	{
 		i = i * 2;
+		index--;
 	}
-	if (index == 0)
+	if ((*n ^ i ) != (*n + i))
 		*n = *n ^ i;
 
 	return (1);

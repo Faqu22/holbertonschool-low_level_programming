@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <limits.h>
 /**
  * flip_bits - this function say the quantity of bits flip to get other number.
  *
@@ -9,14 +9,11 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long long int i;
-	unsigned long long int rel = 0, cont = 0;
+	unsigned long int rel = 0, cont = 0;
 
-	rel = m ^ n;
-	for (i = 1; i < (n | m); i *= 2)
-	{
-		if ((i | rel) == rel)
+	for (rel = m ^ n; rel > 0; rel = rel >> 1)
+		if ((rel | 1) == rel)
 			cont++;
-	}
+
 	return (cont);
 }

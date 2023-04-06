@@ -10,10 +10,12 @@ unsigned int lenbit(unsigned long int n);
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int i = n;
+	unsigned int i = n;
 
-	if (lenbit(n) < index)
+	if (lenbit(4294967295) < index)
 		return (-1);
+	if (lenbit(n) < index)
+		return (0);
 	if (n > 1 && index > 0)
 		i = get_bit(n / 2, index - 1);
 

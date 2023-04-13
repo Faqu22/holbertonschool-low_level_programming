@@ -1,6 +1,6 @@
 #include "main.h"
-#include <string.h>
 
+int dprintf(int fd, const char *format, ...);
 int _cp(char *file_f, char *file_to);
 /**
  * main - entry.

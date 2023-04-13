@@ -53,7 +53,7 @@ int _cp(char *file_f, char *file_to)
 		l = write(ft, temp, n);
 		if (l == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_f);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
 	}

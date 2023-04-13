@@ -57,6 +57,11 @@ int _cp(char *file_f, char *file_to)
 			exit(99);
 		}
 	}
+	if (n == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_f);
+		exit(98);
+	}
 	if (close(ft) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ft);

@@ -47,7 +47,7 @@ int _cp(char *file_f, char *file_to)
 	read(fd, temp, 1024);
 	if (close(fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_f);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 	close(fd);
@@ -60,7 +60,7 @@ int _cp(char *file_f, char *file_to)
 	write(ft, temp, strlen(temp));
 	if (close(ft) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ft);
 		exit(100);
 	}
 	close(ft);

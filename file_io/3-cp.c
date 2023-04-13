@@ -42,34 +42,32 @@ int _cp(char *file_f, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_f);
 		exit(98);
 	}
-	while ((n = read(fd, temp, 1024)) > 0)
-	{
-		l = write(fd, temp, n);
-		if (l == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_f);
-			exit(99);
-		}
-	}
-	read(fd, temp, 1024);
-	if (close(fd) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
-	close(fd);
 	ft = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (ft == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-	write(ft, temp, strlen(temp));
+	while ((n = read(fd, temp, 1024)) > 0)
+	{
+		l = write(ft, temp, n);
+		if (l == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_f);
+			exit(99);
+		}
+	}
 	if (close(ft) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ft);
 		exit(100);
 	}
 	close(ft);
+	if (close(fd) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+	close(fd);
 	return (0);
 }

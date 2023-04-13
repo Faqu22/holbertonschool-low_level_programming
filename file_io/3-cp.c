@@ -28,7 +28,8 @@ int main(int ac, char **av)
 int _cp(char *file_f, char *file_to)
 {
 	int fd, ft;
-	char *temp;
+	char temp[1024];
+	ssize_t n, l;
 
 	if (file_f == NULL || !*file_f)
 	{
@@ -41,9 +42,15 @@ int _cp(char *file_f, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_f);
 		exit(98);
 	}
-	temp = malloc(sizeof(char) * 1024);
-	if (temp == NULL)
-		exit(1);
+	while ((n = read(fd, temp, 1024)) > 0)
+	{
+		l = write(fd, temp, n);
+		if (l == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_f);
+			exit(99);
+		}
+	}
 	read(fd, temp, 1024);
 	if (close(fd) == -1)
 	{

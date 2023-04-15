@@ -1,7 +1,8 @@
 #include "hash_tables.h"
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <string.h>
+char *strdup(const char *str1);
 /**
  * hash_table_set - set a hash table.
  *
@@ -21,12 +22,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = key_index((const unsigned char *) key, ht->size);
 	k = ht->array[index];
 
+	if (k && strcmp(k->key, key) == 0)
+	{
+		free(k->value);
+		k->value = strdup(value);
+		return (1);
+	}
 	k = malloc(sizeof(hash_node_t));
 	if (k == NULL)
 		return (0);
-
-	k->key = (char *)key;
-	k->value = (char *)value;
+	k->key = strdup(key);
+	k->value = strdup(value);
 	k->next = ht->array[index];
 	ht->array[index] = k;
 	return (1);
